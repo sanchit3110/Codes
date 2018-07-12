@@ -1,4 +1,5 @@
-public class ReverseLinkedList{
+
+public class Main{
     
     
     public static class lnode {
@@ -32,7 +33,14 @@ public class ReverseLinkedList{
         
     }
     
-
+    public static void printL(lnode ans){
+        while(ans!=null){
+            System.out.print(ans.val+"->");
+            ans = ans.next;
+        }
+    }
+    
+    
     public static void main(String []args){
         
         
@@ -46,11 +54,7 @@ public class ReverseLinkedList{
         
         
         lnode ans = reverse(head.next);
-        
-        while(ans!=null){
-            System.out.println(ans.val);
-            ans = ans.next;
-        }
+        printL(ans);
         
         
      }
